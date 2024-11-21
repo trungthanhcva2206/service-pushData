@@ -1,1 +1,19 @@
+Changelog
+v1.0
+- Node Google Drive:  
+  - Tích hợp dịch vụ Google Drive để lấy dữ liệu văn bản từ các tệp trên Google Drive.
 
+- Node Pinecone Vector Store:  
+  - Phân tích nội dung sau khi tải về từ Google Drive.  
+  - Tạo embedding và lưu trữ tài liệu dưới dạng vector trong Pinecone.
+
+- Node Embedding OpenAI:  
+  - Sử dụng mô hình OpenAI để tạo embedding từ văn bản, chuyển đổi nội dung sang dạng vector mà máy tính có thể hiểu và xử lý.  
+
+- Node Default Data Loader:  
+  - Xử lý và nạp dữ liệu từ các tệp tải về từ Google Drive.  
+  - Trích xuất và chuẩn bị văn bản để xử lý ở các bước tiếp theo.  
+
+- Node Recursive Character Text Splitter:  
+  - Chia nhỏ tài liệu thành các đoạn văn bản để xử lý tuần tự.  
+  - Các đoạn văn bản nhỏ hơn sẽ được sử dụng để tạo embedding hiệu quả hơn.
