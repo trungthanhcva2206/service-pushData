@@ -42,5 +42,20 @@ Service dùng để nạp dữ liệu và chuyển hóa dữ liệu từ dạng 
 #### Bước 2: Giải nén và truy cập thư mục
 ```bash
 # Giải nén file đã tải
-unzip your-project.zip
-cd your-project
+unzip service-pushPDF.zip
+cd service-pushPDF
+```
+#### Bước 3: Import vô N8N 
+1. Tạo 1 workflow trong N8N
+2. Import file PushPDF.json, file này lấy được ở trong thư mục service-pushPDF
+
+#### Bước 4: Chỉnh sửa các tài khoản dịch vụ
+Ở trong các node Google Drive, OpenAI, Pinecone sẽ có phần **Credential to connect with**, hãy chỉnh sửa các tài khoản dịch vụ của mình ở phần đấy. 
+
+## Tác giả
+- Nguyễn Lê Trung Thành
+- Trần Tuấn Anh
+- Lê Văn Quang
+
+# License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
