@@ -3,6 +3,8 @@
 
 Service dùng để nạp dữ liệu và chuyển hóa dữ liệu từ dạng văn bản thành dạng vector và lưu trữ trong Pinecone Vector Store
 
+Nền tảng công nghệ LCDP sử dụng: **N8N**
+
 ## Changelog
 
 ### v1.0
@@ -50,7 +52,7 @@ cd service-pushPDF
 2. Import file PushPDF.json, file này lấy được ở trong thư mục service-pushPDF
 
 #### Bước 4: Chỉnh sửa các tài khoản dịch vụ
-Ở trong các node Google Drive, OpenAI, Pinecone sẽ có phần **Credential to connect with**, hãy chỉnh sửa các tài khoản dịch vụ của mình ở phần đấy. 
+Ở trong các node Google Drive, OpenAI, Pinecone sẽ có phần **Credential to connect with**, hãy chỉnh sửa các tài khoản dịch vụ của mình ở đây. 
 
 ## Tác giả
 - Nguyễn Lê Trung Thành
