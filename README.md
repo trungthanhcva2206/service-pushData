@@ -33,7 +33,7 @@ Service dùng để nạp dữ liệu và chuyển hóa dữ liệu từ dạng 
 
 ### 2. Cài đặt dữ án
 #### Bước 1: Tải mã nguồn từ bản phát hành
-1. Truy cập trang phát hành chính thức tại: [Releases](https://github.com/your-repository/releases).
+1. Truy cập trang phát hành chính thức tại: [Releases](https://github.com/trungthanhcva2206/service-pushData/releases).
 2. Chọn phiên bản phù hợp với nhu cầu của bạn.
 3. Trong phần **Assets**, tải tệp:
    - `Source code (zip)` hoặc
