@@ -52,7 +52,7 @@ cd service-pushPDF
 2. Import file PushPDF.json, file này lấy được ở trong thư mục service-pushPDF
 
 #### Bước 4: Chỉnh sửa các tài khoản dịch vụ
-Ở trong các node Google Drive, OpenAI, Pinecone sẽ có phần **Credential to connect with**, hãy chỉnh sửa các tài khoản dịch vụ của mình ở đây. 
+Ở trong các node Google Drive, OpenAI, Pinecone sẽ có phần **Credential to connect with**, có thể chỉnh sửa các tài khoản dịch vụ của mình ở đây. 
 
 ## Tác giả
 - Nguyễn Lê Trung Thành
