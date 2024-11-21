@@ -1,0 +1,69 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "fromEmail": "trungthanhcva2206@gmail.com",
+        "toEmail": "={{ $json.body.email }}",
+        "subject": "Thông báo lịch khám bệnh từ phòng khám XYZ",
+        "html": "=<!DOCTYPE html>\n<html lang=\"vi\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Thông Báo Lịch Khám Bệnh</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            background-color: #f4f4f9;\n            color: #333;\n        }\n        .container {\n            width: 80%;\n            max-width: 600px;\n            margin: auto;\n            padding: 20px;\n            background-color: #ffffff;\n            border: 1px solid #ddd;\n            border-radius: 8px;\n            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\n        }\n        h2 {\n            color: #4CAF50;\n            text-align: center;\n        }\n        .info {\n            font-size: 16px;\n            line-height: 1.6;\n            margin: 15px 0;\n        }\n        .highlight {\n            font-weight: bold;\n            color: #555;\n        }\n        .footer {\n            text-align: center;\n            margin-top: 20px;\n            color: #777;\n            font-size: 14px;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"container\">\n        <h2>Thông Báo Lịch Khám Bệnh</h2>\n        <p class=\"info\">Kính chào <span class=\"highlight\">{{ $json.body.patient_content }}</span>,</p>\n        <p class=\"info\">\n            Quý khách có lịch khám bệnh với bác sĩ <span class=\"highlight\">{{ $json.body.doctor_content }}</span> vào thời gian: <span class=\"highlight\">{{ $json.body.appointment_time }}</span>.\n        </p>\n        <p class=\"info\">\n            Xin quý khách vui lòng đến đúng giờ và mang theo đầy đủ giấy tờ cần thiết.\n        </p>\n        <div class=\"footer\">\n            <p>Trân trọng,<br>Phòng Khám XYZ</p>\n        </div>\n    </div>\n</body>\n</html>",
+        "options": {}
+      },
+      "id": "5dfb4958-4e2c-4501-ae14-63e263ea118d",
+      "name": "Send Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        980,
+        160
+      ],
+      "credentials": {
+        "smtp": {
+          "id": "DDKOjfKsuf53YNtY",
+          "name": "SMTP account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "8a04aa02-5e04-4c9f-ae33-b47d32b2242f",
+        "options": {}
+      },
+      "id": "a170ada4-4d8f-49ae-a2f8-d6e76602335f",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        780,
+        160
+      ],
+      "webhookId": "8a04aa02-5e04-4c9f-ae33-b47d32b2242f"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Send Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "9e207748-6ae2-4d79-acb1-30052025d44a",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "43d2ae87ffc3fbd818ed54a23030d81cce9e8e475e02bdb5227c40550866fbf9"
+  },
+  "id": "pZbeXXNTeQU8TqXD",
+  "tags": []
+}
